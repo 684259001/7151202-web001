@@ -13,20 +13,25 @@
         }
         body {
             font-family: Arial, sana-serif;
-            background-color: rgb(175, 230, 255);
+            background: linear-gradient(135deg, #FFD1E3 0%, #ffa0c4 99%, #d4608d 100%);
             margin: 20px;
             line-height: 1.5;
+            family-font: Arial, Helvetica, sans-serif;
+            
         }
         .header {
-            background-color: linear-gradient(to right,blue, white);
+            background: linear-gradient(to right,#FFD1E3, #FFF);
             text-align: center;
+            border-radius: 10px; /*ทำให้กล่องข้อความน่ารักมากขึ้น*/
             padding: 20px;
-            color: rgb(0, 204, 17);
+            color: #1F150C;
+            box-shadow: 0 15px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
         }
         .header a {
-            color: rgb(133, 0, 0);
+            color: #DC9B9B;
             text-decoration: none;
             font-weight: bold;
+            
         }
 
         .container {
@@ -34,13 +39,11 @@
             margin: 0 auto;
         }
         .hero {
-            padding: 50px 2px;
+            padding: 20px;
         }
 
         .text-title {
-            color:rgb(119, 7, 7);
-            font-size: 24px;
-            
+            color:#1F150C;
            /* text-align: center;*/
         }
         .text-center {
@@ -62,73 +65,71 @@
         }
         .h1-lable {background-color: red;}
         .h2-lable {background-color: green;}
+        .h3-lable {background-color: blue;}
+        .h4-lable {background-color: orange;}
+        .h5-lable {background-color: purple;}
+        .h6-lable {background-color: gray;}
 
         pre {
-            background-color: white;
-            border-left: 4px solid red;
+            background-color: #DCCFC0;
+            border-left: 4px solid #412D15;
             padding-top: 10px;
             font-size: 12px;
         }
         .note {
-            color: blue;
-            background-color: yellow;
+            color: #FBEFEF;
+            background-color: #412D15;
         }
         .note::before {
             content: "📌";
         }
-        
+        a {
+            color: #412D15;
+            text-decoration: none;
+        }
+       .back-home {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #412D15;
+            padding: 5px;
+            border: 2px solid #412D15;
+            border-radius: 8px;
+            text-decoration: none;
+}
+
+        .back-home:hover {
+            background-color: #412D15;
+            color: white;
+        }
 
     </style>
 </head>
 <body>
     <section class="header">
         <h1>เรียนรู้เว็บเบื้องต้น</h1>
-        <a href="index02.html">Home</a>
+        <a href="index03.html">Home</a>
     </section>
     
+    <br>
     <div class="container">
-        <div class="hero">
-            <h1>Workshop: HTML Heading</h1>
-            <p>ฝึกใช้แท็ก &lt;h1> – &lt;h6> และการปรับขนาดหัวข้อด้วย CSS</p>
-            <div class="card">
-                <h2>1. ความหมายของ Headings (H1–H6)</h2>
-                <p>HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
-                <ul>
-                    <li><span class="lable h1-lable">H1</span> – หัวข้อใหญ่สุด ใช้ส าหรับชื่อหน้าเว็บหรือหัวข้อหลัก</li>
-                    <li><span class="lable h2-lable">H2</span> – หัวข้อรอง แบ่ง Section ของเนื้อหา</li>
-                    <li><span>H3</span> – หัวข้อย่อยภายใน H2</li>
-                    <li>H4 – ย่อยลงไปอีกระดับ</li>
-                    <li>H5 – ใช้น้อย แต่เน้นลำดับข้อมูล</li>
-                    <li>H6 – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
-                </ul>
-                <p class="note" style="border-left: 4px solid red">H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO และโครงสร้างเอกสาร</p>
-            </div>
-        </div>
+    <h1 class="text-title text-center">Workshop: HTML Heading</h1>
+    <p class="text-center">ฝึกใช้แท็ก &lt;h1> – &lt;h6> และการปรับขนาดหัวข้อด้วย CSS</p>
+    <div class="card">
+        <h2>1. ความหมายของ Headings (H1–H6)</h2>
+        <p>HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
         
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li><span class="lable h1-lable">H1</span> – หัวข้อใหญ่สุด ใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</li>
+            <li><span class="lable h2-lable">H2</span> – หัวข้อรอง แบ่ง Section ของเนื้อหา</li>
+            <li><span class="lable h3-lable">H3</span> – หัวข้อย่อยภายใน H2</li>
+            <li><span class="lable h4-lable">H4</span> – ย่อยลงไปอีกระดับ</li>
+            <li><span class="lable h5-lable">H5</span> – ใช้น้อย แต่เน้นลำดับข้อมูล</li>
+            <li><span class="lable h6-lable">H6</span> – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
+        </ul>
         
-           <!-- Card 2: Examples -->
-        <div class="card">
-        <h2>2. ตัวอย่างการใช ้H1–H6</h2>
-         <pre>
-            <code>
-                &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
-                &lt;h2&gt;HTML Basics&lt;/h2&gt;
-                &lt;h3&gt;What is HTML?&lt;/h3&gt;
-                &lt;h4&gt;HTML Syntax&lt;/h4&gt;
-                &lt;h5&gt;Example Code&lt;/h5&gt;
-                &lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;
-            </code>
-        </pre>
-         <h1>H1: Welcome to My Website</h1>
-         <h2>H2: HTML Basics</h2>
-         <h3>H3: What is HTML?</h3>
-         <h4>H4: HTML Syntax</h4>
-         <h5>H5: Example Code</h5>
-         <h6 class="note">H6: Note about heading size</h6>
-        </div>
-        <a href="index02.html"><p style="text-align: right;">Back to home</p></a>
+        <p class="note" style="border-left: 4px solid red; padding-left: 10px;">H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO และโครงสร้างเอกสาร</p>
     </div>
-
-
+    <a href="index03.html" class="back-home">Home</a>
+</div>
 </body>
 </html>
