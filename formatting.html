@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        }
+        body {
+            font-family: Arial, sana-serif;
+            background: linear-gradient(135deg, #FFD1E3 0%, #ffa0c4 99%, #d4608d 100%);
+            margin: 20px;
+            line-height: 1.5;
+            family-font: Arial, Helvetica, sans-serif;
+            
+        }
+        .box {
+            border: 1px solid black;
+            padding: 15px;
+            margin-top: 10px;
+        }
+        .header {
+            background: linear-gradient(to right,#FFD1E3, #FFF);
+            text-align: center;
+            border-radius: 10px; /*ทำให้กล่องข้อความน่ารักมากขึ้น*/
+            padding: 20px;
+            color: #1F150C;
+            box-shadow: 0 15px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+        }
+        .header a {
+            color: #DC9B9B;
+            text-decoration: none;
+            font-weight: bold;
+            
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .hero {
+            padding: 20px;
+        }
+
+        .text-title {
+            color:#1F150C;
+           /* text-align: center;*/
+        }
+        .text-center {
+            text-align: center;
+        }
+
+        .card{
+    background-color: rgb(240,240,240);
+    padding:10px;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,1);
+    margin-bottom:20px;
+}
+        .lable {
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: white;
+        }
+
+        pre {
+            background-color: #DCCFC0;
+            border-left: 4px solid #412D15;
+            padding-top: 10px;
+            font-size: 12px;
+        }
+        .note {
+            color: #FBEFEF;
+            background-color: #412D15;
+        }
+        .note::before {
+            content: "📌";
+        }
+        a {
+            color: #412D15;
+            text-decoration: none;
+        }
+       .back-home {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #412D15;
+            padding: 5px;
+            border: 2px solid #412D15;
+            border-radius: 8px;
+            text-decoration: none;
+}
+
+        .back-home:hover {
+            background-color: #412D15;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="header">
+        <h1>Workshop: HTML Text Formatting</h1>
+        <br>
+        <p>ฝึกใช้เเท็กรูปแบบข้อความ (Formatting Tags) เพื่อสร้างเนื้อหาที่อ่านง่ายเเละเป็นระเบียบ</p>
+    </section>
+    <br>
+    <div class="card"><div class="container">
+    <h1 class="text-title text-center">1. สิ่งที่ต้องรู้ก่อนเริ่มทำ workshop</h1>
+    <p class="text-center">HTML มีแท็กสำหรับจัดรูปแบบข้อความ ทำให้เนื้อหาดูเด่น อ่านง่าย และสื่อความหมายได้ดีขึ้น</p>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li>&bull; &lt;b&gt;- <b>ตัวหนา (เน้นเฉยๆ)</b></li>
+            <li>&bull; &lt;strong&gt;- ตัวหนาเเบบ <strong>"สำคัญ"</strong> เชิงความหมาย (semantic importance)</li>
+            <li>&bull; &lt;i&gt;- <i>ตัวเอียง (ใช้กับศัพท์เฉพาะหรือตัวเน้น)</i></li>
+            <li>&bull; &lt;em&gt;- <em>ตัวเอียงเเบบเน้นน้ำเสียง</em></li>
+            <li>&bull; &lt;u&gt; - <u>ขีดเส้นใต้</u></li>
+            <li>&bull; &lt;ins&gt; - <ins>ขีดเส้นใต้</ins></li>
+            <li>&bull; &lt;mark&gt; - <mark>ไฮไลด์ข้อความ</mark></li>
+            <li>&bull; &lt;code&gt; - <code>แสดงข้อความเป็นรูปแบบโค้ด</code></li>
+            <li>&bull; &lt;small&gt; - <small>ข้อความขนาดเล็ก</small></li>
+            <li>&bull; &lt;del&gt; - <del>ข้อความขีดฆ่า</del></li>
+            <li>&bull; &lt;s&gt; - <s>ข้อความขีดฆ่า</s></li>
+            <li>&bull; &lt;sub&gt; - ตัวห้อย เช่น H<sub>2</sub>O</li>
+            <li>&bull; &lt;sup&gt; - ตัวยก เช่น x<sup>2</sup></li>
+        </ul>
+        <br>
+        <div class="box">
+            <p>แท็กที่รองรับใน  HTML5</p>
+        <br>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li>&bull; &lt;strike&gt;- <strike>not support in HTML5</strike></li>
+            <li>&bull; &lt;big&gt;- <big>not support in HTML5</big></li>
+            <li>&bull; &lt;tt&gt;- <tt>not support in HTML</tt></li>
+        </ul>
+        </div>
+        <p class="note" style="border-left: 4px solid red; padding-left: 10px;">นักศึกษาต้องใช้เเท็ก formatting อย่างน้อย 5 ชนิดในงานนี้</p>
+    </div>
+    </div>
+    
+    <br>
+    
+<div class="card">
+    <div class="container"></div>
+    <h1>เทคโนโลยีคอมพิวเตอร์สมัยใหม่</h1>
+    <p>&nbsp;&nbsp;ปัจจุบัน <span style="color:red;"><b>ปัญญาประดิษฐ์ (AI)</b></span>
+มีบทบาทสำคัญในการช่วยวิเคราะห์ข้อมูลและสนับสนุนการตัดสินใจ
+ทำให้การทำงานมี <span style="color:red;"><strong>ประสิทธิภาพสูงขึ้น</strong></span>
+และลดเวลาในการดำเนินงานในหลายอุตสาหกรรม
+</p>
+
+    <p>&nbsp;&nbsp;เทคโนโลยี <span style="color:red;"><i>Cloud Computing</i></span>
+ช่วยให้ผู้ใช้งานสามารถจัดเก็บและเข้าถึงข้อมูลผ่านอินเทอร์เน็ตได้ทุกที่ทุกเวลา    พร้อมทั้งรองรับการทำงานร่วมกันได้อย่าง
+<span style="color:red;"><em>สะดวกและรวดเร็ว</em></span>
+</p>
+
+    <p>&nbsp;&nbsp;นอกจากนี้ <span style="color:red;"><u>Cybersecurity</u></span>
+ยังมีความสำคัญในการป้องกันข้อมูลจากการโจมตีทางไซเบอร์
+โดยผู้ใช้งานควรตั้งรหัสผ่านที่แข็งแรง เช่น
+<span style="color:red;"><code>P@ssw0rd123</code></span>
+และอัปเดตระบบอยู่เสมอเพื่อเพิ่มความปลอดภัย
+</p>
+    <!-- <h1 class="text-title text-center">2.ภารกิจของสำหรับนักศึกษาต้องทำ</h1>
+    <p class="text-center">ให้ค้นหาเนื้อหาเกี่ยวกับ "<b>เทคโนโลยีคอมพิวเตอร์สมัยใหม่</b>" โดยต้องมี: </p>
+    <br>
+        <ul style="list-style-type: none; padding-left: 0;">
+            <li>&bull; หัวข้อ &lt;h1&gt; 1 อัน</li>
+            <li>&bull; ย่อหน้า &lt;p&gt; อย่างน้อย 3 ย่อหน้า</li>
+            <li>&bull; ใช้เเท็ก formatting อย่างน้อย <strong>5 ประเภท</strong></li>
+            <li>&bull; ข้อความไหนมีการจัด formatting ให้ <strong>ใส่ข้อความเป็นสีแดงชมพู</strong></li>
+        </ul> -->
+</div>
+
+<div class="card">
+    <div class="container"></div>
+    <h1>ซอฟต์แวร์ (Software)</h1>
+<p>ซอฟต์แวร์คือ <b><span style="color:red;">ชุดคำสั่ง</span></b>
+ที่ใช้ควบคุมการทำงานของคอมพิวเตอร์<i><span style="color:red;">ช่วยให้ผู้ใช้สามารถทำงานได้อย่างสะดวก</span></i>
+และรองรับการใช้งานในหลายด้าน เช่น การศึกษา การทำงาน และความบันเทิง
+</p>
+
+<p>ซอฟต์แวร์แบ่งออกเป็น <u><span style="color:red;">ซอฟต์แวร์ระบบ</span></u>
+และ <strong><span style="color:red;">ซอฟต์แวร์ประยุกต์</span></strong>
+โดยระบบปฏิบัติการทำหน้าที่ควบคุมเครื่อง ส่วนโปรแกรมประยุกต์ใช้สำหรับงานเฉพาะ เช่น พิมพ์เอกสารหรือท่องอินเทอร์เน็ต
+</p>
+
+<p>การเลือกใช้ซอฟต์แวร์ควรคำนึงถึง <mark><span style="color:red;">ความเหมาะสม</span></mark>,<em><span style="color:red;">ความปลอดภัย</span></em>
+และ <small><span style="color:red;">การอัปเดตอย่างสม่ำเสมอ</span></small> เพื่อให้การใช้งานมีประสิทธิภาพและลดความเสี่ยงจากปัญหาด้านความปลอดภัย
+</p>
+</div>
+    <a href="index.html" class="back-home">Home</a>
+</body>
+</html>
