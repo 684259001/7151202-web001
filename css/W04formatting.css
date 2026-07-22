@@ -1,0 +1,343 @@
+*{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        }
+        body {
+            font-family: Arial, sana-serif;
+            background: linear-gradient(135deg, #FFD1E3 0%, #ffa0c4 99%, #d4608d 100%);
+            margin: 20px;
+            line-height: 1.5;
+            family-font: Arial, Helvetica, sans-serif;
+            
+        }
+
+        footer,
+        .hero,
+.card{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:2px solid #ffd8ec;
+
+    box-shadow:0 8px 20px rgba(255,165,210,.15);
+
+    transition:.3s;
+
+}
+
+      
+    
+        .tip-box {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        header {
+            background: linear-gradient(to right,#FFEBB7, #FFF);
+            border-radius: 10px; /*ทำให้กล่องข้อความน่ารักมากขึ้น*/
+            padding: 20px;
+            color: #1F150C;
+            box-shadow: 0 15px 8px rgba(0, 0, 0, 0.2);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-icon {
+            font-size: 50px;
+        }
+        .brand-text p{
+            font-size: 14px;
+        }
+
+        nav a {
+            color: #000000;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            padding: 45px 70px 25px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+}
+
+.container {
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+.card-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+        
+    .card-header {
+    background:  #fff8c7;
+
+    color: #333;
+    font-weight: 600;
+    font-size: 19px;
+
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+.format-row{
+
+    display:grid;
+
+    grid-template-columns:95px 1fr;
+
+    gap:15px;
+
+    align-items:center;
+
+    padding:12px 0;
+
+    border-bottom:1px dashed #f2cfe2;
+
+}
+
+
+.card-body {
+    padding: 20px;
+
+}
+
+.lable {
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 10px;
+
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+        }
+
+.b-label {background-color: #A9C4FF;
+}
+.strong-label {background-color: #D9A9FF;}
+.i-label {background-color: #9EE8C4;}
+.em-label {background-color: #FFC49E;}
+.u-label {background-color: #FFAEB9;}
+.mark-label {background-color: #9EC3FF;}
+.small-label {background-color: #FFB199;}
+.del-label {background-color: #FFA9D7;}
+.sup-label {background-color: #CBA9FF;}
+.sub-label {background-color: #9EF0D9;}
+
+.code-box{
+
+    background:#fff6a5;
+
+    color:#060606;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    position:relative;
+
+    overflow:auto;
+
+}
+
+.code-box pre{
+
+    font-family:Consolas, monospace;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+.copy-icon{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+
+ .hero-icon {
+            font-size: 50px;
+            background-color: #FFD275;
+            border-radius: 10px;
+        }
+/* ==========================
+   Activity
+========================== */
+
+.activity-list{
+
+    list-style:none;
+
+}
+
+.activity-list li{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+    margin-bottom:18px;
+
+}
+
+.check{
+
+    width:30px;
+
+    height:30px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-weight:bold;
+
+    flex-shrink:0;
+
+}
+
+.check-blue{
+
+    background:#4D9DFF;
+
+}
+
+.check-teal{
+
+    background:#27D7B5;
+
+}
+
+.check-green{
+
+    background:#50D56A;
+
+}
+
+.check-orange{
+
+    background:#FFB348;
+
+}
+
+.check-purple{
+
+    background:#B678FF;
+
+}
+
+/* ==========================
+   Tip Box
+========================== */
+
+.tip-box{
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:flex-start;
+
+    background:#FFF8DF;
+
+    border:2px solid #FFD966;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    box-shadow:0 8px 20px rgba(255,215,90,.15);
+
+}
+
+.tip-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:#FFD84E;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    flex-shrink:0;
+
+}
+
+.tip-content h2{
+
+    color:#d68b00;
+
+    margin-bottom:8px;
+
+}
+
+.tip-content p{
+
+    color:#555;
+
+}
