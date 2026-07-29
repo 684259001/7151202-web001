@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link and Image</title>
+
+    <!-- google fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <!-- เป็นการลิงค์ไปยังไฟล์ CSS ภายนอก โดยใช้แท็ก <link> และกำหนดคุณสมบัติ rel เป็น "stylesheet" เพื่อระบุว่าเป็นไฟล์สไตล์ชีท และ href เป็น URL ของไฟล์ CSS ที่ต้องการเชื่อมโยง -->
+    <!-- หากต้องการลิงค์ ต้องเข้าโฟรเดอร์ css/ ด้วยนะ -->
+    <link rel="stylesheet" href="css/W06-01-link-image.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <header class="site-header">
+            <!-- brand -->
+            <div class="brand">
+                <div class="brand-icon">🎓</div>
+                <div class= "brand-text">
+                    <h2>เรียนรู้เว็บเบื้องต้น</h2>
+                    <p>Web Development Basics</p>
+                </div>
+            </div>
+
+            <!-- main nav -->
+             <nav class="main-nav">
+                <!-- ulจะทำให้เป็น จุดนำหน้า แต่หากเป็น  ol จะเป็น เลขที่นำหน้าแทน -->
+                <ul class="nav-list">
+                    <li><a href="">🏡Home</a></li>
+                    <li><a href="">💡Heading</a></li>
+                    <li><a href="">🧩Formatting</a></li>
+                    <li><a href="">🔗Link and Image</a></li>
+                    <li><a href="">📝practice</a></li>
+                </ul>
+             </nav>
+        </header>
+
+        <!-- main-layout-->
+        <main class="main-layout">
+            <section class="left-content">
+                <!-- hero section -->
+                <section class="hero">
+                    <div class="hero-text">
+                        <h1>แบบฝึกปฏิบัติ: HTML Link และ Image</h1>
+                        <p>เรียนรู้การสร้างลิงค์ และการเเทรกรูปภาพด้วยเเท็ก HTML<br>พร้อมตัวอย่าง CSS</p>
+                    </div>
+                    <div class="hero-photo">
+                        <img src="images/memes01.png" alt="Memes Image" width="300">
+                    </div>
+                </section>
+
+                <!-- link example -->
+                <article class="card"></article>
+
+                <!-- image example -->
+                <article class="card"></article>
+
+            </section>
+
+            <section class="right-sidebar">Sidebar</section>
+        </main>
+
+        <!-- tip-box -->
+        <footer class="tip-box">tip-box</footer>
+
+    </div>
+
+</body>
+</html>

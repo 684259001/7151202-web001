@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Kanit",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background: linear-gradient(15deg, #ff6eb6,#ffffff); */
+    color: #000000;
+
+    line-height: 1.6;
+}
+
+/* ถ้าเป็น . จะเป็น class */
+/* ถ้าเป็น # จะเป็น การอ้างอิงตำหแน่งที่เป็น ID
+#container {} */
+.container {
+    /* border: 1px solid #ff0000;
+    padding: 20px;
+    margin: 20px auto; */
+}
+/* =============== header ==============*/
+.site-header {
+    /* border: 1px solid #ffffff;
+    padding: 20px;
+    margin: 20px auto; */
+
+    background: linear-gradient(90deg, #ffd6e5, #FFB5DA);
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.brand {
+    /* border: 1px solid #000000;
+    padding: 10px;
+    margin: 10px auto; */
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #392a0b;
+    margin-left: 10px;
+}
+
+.brand-icon {
+    background-color: #ffffff;
+    border-radius: 50px;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #FF769F;
+    font-size: 30px;
+    
+}
+
+.brand-text p{
+    font-size: 14px;
+    color: #392a0b;
+    /* opacity: 0.8; */
+}
+.brand-text h2{
+    font-size: 26px;
+    color: #392a0b;
+}
+
+.main-nav {
+    /* border: 1px solid #000000;
+    padding: 10px;
+    margin: 10px auto; */
+
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-list a {
+    color:#392a0b;
+    text-decoration: none;
+
+    padding: 12px 16px;
+    transition: all 0.5s;
+}
+.nav-list a:hover {
+    background-color: #ffe4f2;
+    border-radius: 15px;
+}
+
+/* =============== main-layout ==============*/
+.main-layout {
+    /* border: 1px solid #5c5cc4;
+    padding: 20px;
+    margin: 20px auto; */
+
+    display: grid;
+    grid-template-columns: 1fr 390px;
+    /* grid-template-columns: 70% 30%; */
+    padding: 20px 22px 0px;
+}
+
+
+/* ============== left-content ============= */
+.left-content {
+    /* border: 1px solid #c60000;
+    padding: 20px;
+    margin: 20px ;
+ */
+
+    display: flex; /*  ไอนี่ต่อแถวเรียง1 */
+    flex-direction: column; /* ไอนี่ตบอีเฟรคให้ลงมาเหมือนเดิม */
+    gap: 20px;
+}
+
+/* hero */
+.hero {
+    /* border: 1px solid #04fafa;
+    padding: 20px;
+    margin: 20px ; */
+
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(90deg, #ffd6e5, #FFB5DA);
+    border-radius: 13px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px 36px;
+
+    min-height: 185px;
+}
+
+.hero-text h1{
+    font-size: 36px;
+    color: #392a0b;
+}
+
+.hero-text p{
+    font-size: 26px;
+    color: #392a0b;
+    font-weight: 300;
+}
+
+.hero-photo img{
+    width: 400px;
+    height: 200px;
+    border: 3px solid #FFF275;
+
+    opacity: 0.9;
+    /* object-fit: contain; ไอนี่รูปไม่พิดีกรอบ*/
+    /* object-fit: fill; ส่วนไอนี่ รูปพอดีกรอบแต่เเม่มยืดจนรูปเบี้ยว*/
+
+    /* ========= ส่วนไอนี่ รูปพอดีกรอบเเต่รูปไม่เบี้ยว ========== */
+    opject-fit: cover; 
+
+    border-radius: 25px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* link example */
+.card {
+    border: 1px solid #000000;
+    padding: 20px;
+    margin: 20px ;
+}
+
+/* image example */
+.card {
+    border: 1px solid #000000;
+    padding: 20px;
+    margin: 20px ;
+}
+
+
+
+/* ============== right-sidebar ============= */
+.right-sidebar {
+    border: 1px solid #04f618;
+    padding: 20px;
+    margin: 20px ;
+}
+
+/* =============== tip-box ==============*/
+.tip-box {
+    border: 1px solid #5c5cc4;
+    padding: 20px;
+    margin: 20px auto;
+}
