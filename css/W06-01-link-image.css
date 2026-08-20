@@ -1,205 +1,296 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
-    font-family: "Kanit",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* background: linear-gradient(15deg, #ff6eb6,#ffffff); */
-    color: #000000;
+  font-family: "Kanit", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* background: linear-gradient(15deg, #ff6eb6,#ffffff); */
+  color: #000000;
 
-    line-height: 1.6;
+  line-height: 1.6;
 }
 
 /* ถ้าเป็น . จะเป็น class */
 /* ถ้าเป็น # จะเป็น การอ้างอิงตำหแน่งที่เป็น ID
 #container {} */
 .container {
-    /* border: 1px solid #ff0000;
+  /* border: 1px solid #ff0000;
     padding: 20px;
     margin: 20px auto; */
 }
 /* =============== header ==============*/
 .site-header {
-    /* border: 1px solid #ffffff;
+  /* border: 1px solid #ffffff;
     padding: 20px;
     margin: 20px auto; */
 
-    background: linear-gradient(90deg, #ffd6e5, #FFB5DA);
-    border-radius: 10px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(90deg, #ffd6e5, #ffb5da);
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    padding: 10px;
+  padding: 10px;
 }
 
 .brand {
-    /* border: 1px solid #000000;
+  /* border: 1px solid #000000;
     padding: 10px;
     margin: 10px auto; */
 
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #392a0b;
-    margin-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #392a0b;
+  margin-left: 10px;
 }
 
 .brand-icon {
-    background-color: #ffffff;
-    border-radius: 50px;
+  background-color: #ffffff;
+  border-radius: 50px;
 
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border: 2px solid #FF769F;
-    font-size: 30px;
-    
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ff769f;
+  font-size: 30px;
 }
 
-.brand-text p{
-    font-size: 14px;
-    color: #392a0b;
-    /* opacity: 0.8; */
+.brand-text p {
+  font-size: 14px;
+  color: #392a0b;
+  /* opacity: 0.8; */
 }
-.brand-text h2{
-    font-size: 26px;
-    color: #392a0b;
+.brand-text h2 {
+  font-size: 26px;
+  color: #392a0b;
 }
 
 .main-nav {
-    /* border: 1px solid #000000;
+  /* border: 1px solid #000000;
     padding: 10px;
     margin: 10px auto; */
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .nav-list {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    align-items: center;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .nav-list a {
-    color:#392a0b;
-    text-decoration: none;
+  color: #392a0b;
+  text-decoration: none;
 
-    padding: 12px 16px;
-    transition: all 0.5s;
+  padding: 12px 16px;
+  transition: all 0.5s;
 }
 .nav-list a:hover {
-    background-color: #ffe4f2;
-    border-radius: 15px;
+  background-color: #ffe4f2;
+  border-radius: 15px;
 }
 
 /* =============== main-layout ==============*/
 .main-layout {
-    /* border: 1px solid #5c5cc4;
+  /* border: 1px solid #5c5cc4;
     padding: 20px;
     margin: 20px auto; */
 
-    display: grid;
-    grid-template-columns: 1fr 390px;
-    /* grid-template-columns: 70% 30%; */
-    padding: 20px 22px 0px;
+  display: grid;
+  grid-template-columns: 1fr 390px;
+  /* grid-template-columns: 70% 30%; */
+  padding: 20px 22px 0px;
 }
-
 
 /* ============== left-content ============= */
 .left-content {
-    /* border: 1px solid #c60000;
+  /* border: 1px solid #c60000;
     padding: 20px;
     margin: 20px ;
  */
 
-    display: flex; /*  ไอนี่ต่อแถวเรียง1 */
-    flex-direction: column; /* ไอนี่ตบอีเฟรคให้ลงมาเหมือนเดิม */
-    gap: 20px;
+  display: flex; /*  ไอนี่ต่อแถวเรียง1 */
+  flex-direction: column; /* ไอนี่ตบอีเฟรคให้ลงมาเหมือนเดิม */
+  gap: 20px;
 }
 
 /* hero */
 .hero {
-    /* border: 1px solid #04fafa;
-    padding: 20px;
-    margin: 20px ; */
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  align-items: center;
+  justify-content: center;
 
-    display: grid;
-    grid-template-columns: 1.5fr 0.8fr;
-    align-items: center;
-    justify-content: center;
+  background: linear-gradient(90deg, #ffd6e5, #ffb5da);
+  border-radius: 13px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px 36px;
 
-    background: linear-gradient(90deg, #ffd6e5, #FFB5DA);
-    border-radius: 13px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    padding: 20px 36px;
-
-    min-height: 185px;
+  min-height: 185px;
 }
 
-.hero-text h1{
-    font-size: 36px;
-    color: #392a0b;
+.hero-text h1 {
+  font-size: 36px;
+  color: #392a0b;
 }
 
-.hero-text p{
-    font-size: 26px;
-    color: #392a0b;
-    font-weight: 300;
+.hero-text p {
+  font-size: 26px;
+  color: #392a0b;
+  font-weight: 300;
 }
 
-.hero-photo img{
-    width: 400px;
-    height: 200px;
-    border: 3px solid #FFF275;
+.hero-photo img {
+  width: 400px;
+  height: 200px;
+  border: 3px solid #fff275;
 
-    opacity: 0.9;
-    /* object-fit: contain; ไอนี่รูปไม่พิดีกรอบ*/
-    /* object-fit: fill; ส่วนไอนี่ รูปพอดีกรอบแต่เเม่มยืดจนรูปเบี้ยว*/
+  opacity: 0.9;
+  /* object-fit: contain; ไอนี่รูปไม่พิดีกรอบ*/
+  /* object-fit: fill; ส่วนไอนี่ รูปพอดีกรอบแต่เเม่มยืดจนรูปเบี้ยว*/
 
-    /* ========= ส่วนไอนี่ รูปพอดีกรอบเเต่รูปไม่เบี้ยว ========== */
-    opject-fit: cover; 
+  /* ========= ส่วนไอนี่ รูปพอดีกรอบเเต่รูปไม่เบี้ยว ========== */
+  opject-fit: cover;
 
-    border-radius: 25px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* link example */
+/*====================== link example =========================*/
 .card {
-    border: 1px solid #000000;
-    padding: 20px;
-    margin: 20px ;
+  /* border: 1px solid #000000; */
+  /* border-radius: 13px; */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px 36px;
+
+  background-color: white;
+  border: 1px solid#ffb5da;
+  border-radius: 15px;
+
+  margin-top: 20px;
 }
 
-/* image example */
-.card {
-    border: 1px solid #000000;
-    padding: 20px;
-    margin: 20px ;
+.card-header-title {
+  /* background-color: red; */
+}
+.card-header-title h2 {
+  /* background-color: red; */
+  color: #392a0b;
+}
+.card-body-grid {
+  /* background-color: blue; */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px;
 }
 
+/*============== กล่องลิงก์ด้านซ้าย ==========*/
+.result-panel,
+.code-panel {
+  /* background-color: pink; */
+  border: 1px solid#ffb5da;
+  border-radius: 13px;
 
+  /* overflow คือ ซ่อนสิ่งที่ล้นออกมา */
+  overflow: hidden;
+}
+.result-panel-header,
+.code-panel-header {
+  background-color: #ffb5da;
+  color: #392a0b;
+  padding: 0px 20px;
+  font-weight: bold;
+}
+.result-panel-body {
+  padding: 5px 20px 20px 20px;
+  line-height: 2;
+}
+.result-panel-body a {
+  display: block;
+  color: rgb(62, 152, 255);
+}
+.result-panel-body a:hover {
+  color: #ff6db6;
+}
+.back-btn {
+  border-radius: 10px;
+  border: 2px solid rgb(62, 152, 255);
+  display: inline-block !important;
+  text-decoration: none;
+  padding: 0 20px;
+}
+.icon {
+  background-color: #ff9dce;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.code-panel {
+  background-color: black;
+}
+.code-panel-header {
+}
+.code-panel-body {
+  margin-left: 30px;
+  line-height: 2;
+}
+.code-list {
+  color: white;
+  padding: 0px 20px;
+}
+.code-list li {
+  padding: 0px 20px;
+}
+.tag {
+  color: rgb(252, 107, 107);
+}
+.attr {
+  color: rgb(255, 255, 129);
+}
+.value {
+  color: rgb(87, 216, 136);
+}
 
+/*====================== image example ========================*/
+.result-panel-body-3g {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: baseline;
+  text-align: center;
+  font-size: 14px;
+}
+.pic3p {
+  opacity: 0.9;
+  opject-fit: cover;
+
+  border: 1.5px solid #ff9dce;
+
+  border-radius: 25px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
 /* ============== right-sidebar ============= */
 .right-sidebar {
-    border: 1px solid #04f618;
-    padding: 20px;
-    margin: 20px ;
+  border: 1px solid #04f618;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px;
 }
 
 /* =============== tip-box ==============*/
 .tip-box {
-    border: 1px solid #5c5cc4;
-    padding: 20px;
-    margin: 20px auto;
+  border: 1px solid #5c5cc4;
+  padding: 20px;
+  margin: 20px auto;
 }

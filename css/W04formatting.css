@@ -1,530 +1,463 @@
-*{
-            box-sizing: border-box;
-            margin:0;
-            padding:0;
-        }
-        body {
-            font-family: Arial, sana-serif;
-            background: linear-gradient(135deg, #FFD1E3 0%, #ffa0c4 99%, #d4608d 100%);
-            margin: 20px;
-            line-height: 1.5;
-            family-font: Arial, Helvetica, sans-serif;
-            
-        }
-
-        footer,
-        .hero,
-.card{
-
-    background:#ffffff;
-
-    border-radius:22px;
-
-    overflow:hidden;
-
-    border:2px solid #ffd8ec;
-
-    box-shadow:0 8px 20px rgba(255,165,210,.15);
-
-    transition:.3s;
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sana-serif;
+  background: linear-gradient(135deg, #ffd1e3 0%, #ffa0c4 99%, #d4608d 100%);
+  margin: 20px;
+  line-height: 1.5;
+  family-font: Arial, Helvetica, sans-serif;
 }
 
-      
-    
-        .tip-box {
-            background-color: #fff;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 10px;
-        }
+footer,
+.hero,
+.card {
+  background: #ffffff;
 
-        header {
-            background: linear-gradient(to right,#FFEBB7, #FFF);
-            border-radius: 10px; /*ทำให้กล่องข้อความน่ารักมากขึ้น*/
-            padding: 20px;
-            color: #1F150C;
-            box-shadow: 0 15px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 22px;
 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+  /* สำหรับให้ข้อความไม่เลยกล่องข้อความ */
+  overflow: hidden; 
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+  border: 2px solid #ffd8ec;
 
-        .brand-icon {
-            font-size: 50px;
-        }
-        .brand-text p{
-            font-size: 14px;
-        }
+  box-shadow: 0 8px 20px rgba(255, 165, 210, 0.15);
 
-        nav a {
-            color: #000000;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+  /* ทำให้มีอนิเมชั่นที่นุ่มนวลขึ้น */
+  transition: 0.3s;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+.tip-box {
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
 
-        .hero {
-            padding: 45px 70px 25px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
+header {
+  background: linear-gradient(to right, #ffebb7, #fff);
+  border-radius: 10px; /*ทำให้กล่องข้อความน่ารักมากขึ้น*/
+  padding: 20px;
+  color: #1f150c;
+  box-shadow: 0 15px 8px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  /* สำหรับจัดพื้นที่ให้สมดุลขึ้น */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  /* เว้นช่องว่าง */
+  gap: 10px;
+}
+
+.brand-icon {
+  font-size: 50px;
+}
+.brand-text p {
+  font-size: 14px;
+}
+
+/* จะเป็นระบบนำทางที่นำไปหน้าอื่นคล้ายลิงก์ */
+nav a {
+  color: #000000;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+nav a:hover {
+    /* ลบเสินใต้ตอนเขียนลิงก์ */
+  text-decoration: underline;
+}
+
+.hero {
+  padding: 45px 70px 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .container {
-            max-width: 1400px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-.card-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:25px;
-
-    margin-bottom:30px;
-
-}
-        
-    .card-header {
-    background:  #fff8c7;
-
-    color: #333;
-    font-weight: 600;
-    font-size: 19px;
-
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-}
-.format-row{
-
-    display:grid;
-
-    grid-template-columns:95px 1fr;
-
-    gap:15px;
-
-    align-items:center;
-
-    padding:12px 0;
-
-    border-bottom:1px dashed #f2cfe2;
-
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
+.card-grid {
+  display: grid;
+
+  /* แบ่งช่องว่างระหว่างช่องให้เท่ากัน */
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  /* ดันหรือเว้นช่องว่างด้านล่าง ภายนอก หากจะดันภายใน*/
+  margin-bottom: 30px;
+}
+
+.card-header {
+  background: #fff8c7;
+
+  color: #333;
+  font-weight: 600;
+  font-size: 19px;
+
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.format-row {
+  display: grid;
+
+  grid-template-columns: 95px 1fr;
+
+  gap: 15px;
+
+  align-items: center;
+
+  padding: 12px 0;
+
+  border-bottom: 1px dashed #f2cfe2;
+}
 
 .card-body {
-    padding: 20px;
-
+  padding: 20px;
 }
 
 .lable {
-    color: #fff;
-    padding: 5px 8px;
-    border-radius: 10px;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 10px;
 
-    text-align: center;
-    font-weight: 600;
-    font-size: 14px;
-        }
-
-.b-label {background-color: #A9C4FF;
-}
-.strong-label {background-color: #D9A9FF;}
-.i-label {background-color: #9EE8C4;}
-.em-label {background-color: #FFC49E;}
-.u-label {background-color: #FFAEB9;}
-.mark-label {background-color: #9EC3FF;}
-.small-label {background-color: #FFB199;}
-.del-label {background-color: #FFA9D7;}
-.sup-label {background-color: #CBA9FF;}
-.sub-label {background-color: #9EF0D9;}
-
-.code-box{
-
-    background:#fff6a5;
-
-    color:#060606;
-
-    border-radius:18px;
-
-    padding:22px;
-
-    position:relative;
-
-    overflow:auto;
-
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
 }
 
-.code-box pre{
-
-    font-family:Consolas, monospace;
-
-    font-size:14px;
-
-    line-height:1.8;
-
+.b-label {
+  background-color: #a9c4ff;
 }
-.copy-icon{
-
-    position:absolute;
-
-    top:18px;
-
-    right:18px;
-
-    color:#ffffff;
-
-    font-size:20px;
-
-    cursor:pointer;
-
+.strong-label {
+  background-color: #d9a9ff;
+}
+.i-label {
+  background-color: #9ee8c4;
+}
+.em-label {
+  background-color: #ffc49e;
+}
+.u-label {
+  background-color: #ffaeb9;
+}
+.mark-label {
+  background-color: #9ec3ff;
+}
+.small-label {
+  background-color: #ffb199;
+}
+.del-label {
+  background-color: #ffa9d7;
+}
+.sup-label {
+  background-color: #cba9ff;
+}
+.sub-label {
+  background-color: #9ef0d9;
 }
 
+.code-box {
+  background: #fff6a5;
 
+  color: #060606;
 
+  border-radius: 18px;
 
+  padding: 22px;
 
+  position: relative;
 
- .hero-icon {
-            font-size: 50px;
-            background-color: #FFD275;
-            border-radius: 10px;
-        }
+  overflow: auto;
+}
+
+.code-box pre {
+  font-family: Consolas, monospace;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+.copy-icon {
+  position: absolute;
+
+  top: 18px;
+
+  right: 18px;
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+.hero-icon {
+  font-size: 50px;
+  background-color: #ffd275;
+  border-radius: 10px;
+}
 /* ==========================
    Activity
 ========================== */
 
-.activity-list{
-
-    list-style:none;
-
+.activity-list {
+  list-style: none;
 }
 
-.activity-list li{
+.activity-list li {
+  display: flex;
 
-    display:flex;
+  align-items: flex-start;
 
-    align-items:flex-start;
+  gap: 15px;
 
-    gap:15px;
-
-    margin-bottom:18px;
-
+  margin-bottom: 18px;
 }
 
-.check{
+.check {
+  width: 30px;
 
-    width:30px;
+  height: 30px;
 
-    height:30px;
+  border-radius: 50%;
 
-    border-radius:50%;
+  display: flex;
 
-    display:flex;
+  justify-content: center;
 
-    justify-content:center;
+  align-items: center;
 
-    align-items:center;
+  color: white;
 
-    color:white;
+  font-weight: bold;
 
-    font-weight:bold;
-
-    flex-shrink:0;
-
+  flex-shrink: 0;
 }
 
-.check-blue{
-
-    background:#4D9DFF;
-
+.check-blue {
+  background: #4d9dff;
 }
 
-.check-teal{
-
-    background:#27D7B5;
-
+.check-teal {
+  background: #27d7b5;
 }
 
-.check-green{
-
-    background:#50D56A;
-
+.check-green {
+  background: #50d56a;
 }
 
-.check-orange{
-
-    background:#FFB348;
-
+.check-orange {
+  background: #ffb348;
 }
 
-.check-purple{
-
-    background:#B678FF;
-
+.check-purple {
+  background: #b678ff;
 }
 
 /* ==========================
    Tip Box
 ========================== */
 
-.tip-box{
+.tip-box {
+  display: flex;
 
-    display:flex;
+  gap: 20px;
 
-    gap:20px;
+  align-items: flex-start;
 
-    align-items:flex-start;
+  background: #fff8df;
 
-    background:#FFF8DF;
+  border: 2px solid #ffd966;
 
-    border:2px solid #FFD966;
+  border-radius: 22px;
 
-    border-radius:22px;
+  padding: 25px;
 
-    padding:25px;
-
-    box-shadow:0 8px 20px rgba(255,215,90,.15);
-
+  box-shadow: 0 8px 20px rgba(255, 215, 90, 0.15);
 }
 
-.tip-icon{
+.tip-icon {
+  width: 60px;
 
-    width:60px;
+  height: 60px;
 
-    height:60px;
+  border-radius: 50%;
 
-    border-radius:50%;
+  background: #ffd84e;
 
-    background:#FFD84E;
+  display: flex;
 
-    display:flex;
+  justify-content: center;
 
-    justify-content:center;
+  align-items: center;
 
-    align-items:center;
+  font-size: 28px;
 
-    font-size:28px;
-
-    flex-shrink:0;
-
+  flex-shrink: 0;
 }
 
-.tip-content h2{
+.tip-content h2 {
+  color: #d68b00;
 
-    color:#d68b00;
-
-    margin-bottom:8px;
-
+  margin-bottom: 8px;
 }
 
-.tip-content p{
-
-    color:#555;
-
+.tip-content p {
+  color: #555;
 }
 
 /* ===========================
         FOOTER
 =========================== */
 
-.footer{
+.footer {
+  background: linear-gradient(135deg, #ffd6e7, #ffc7dd, #ffb7d3);
 
-    background: linear-gradient(
-        135deg,
-        #ffd6e7,
-        #ffc7dd,
-        #ffb7d3
-    );
+  color: #5f4158;
 
-    color:#5f4158;
+  margin-top: 60px;
 
-    margin-top:60px;
+  padding-top: 55px;
 
-    padding-top:55px;
+  border-top-left-radius: 35px;
 
-    border-top-left-radius:35px;
+  border-top-right-radius: 35px;
 
-    border-top-right-radius:35px;
-
-    box-shadow:0 -10px 25px rgba(255,155,190,.25);
-
+  box-shadow: 0 -10px 25px rgba(255, 155, 190, 0.25);
 }
-
 
 /* ===========================
       Container
 =========================== */
 
-.footer-container{
+.footer-container {
+  width: 90%;
 
-    width:90%;
+  max-width: 1300px;
 
-    max-width:1300px;
+  margin: auto;
 
-    margin:auto;
+  display: grid;
 
-    display:grid;
+  grid-template-columns: repeat(4, 1fr);
 
-    grid-template-columns:
-    repeat(4,1fr);
-
-    gap:60px;
-
+  gap: 60px;
 }
-
 
 /* ===========================
        Headings
 =========================== */
 
-.footer-box h2{
+.footer-box h2 {
+  font-size: 28px;
 
-    font-size:28px;
+  margin-bottom: 20px;
 
-    margin-bottom:20px;
-
-    color:#d63384;
-
+  color: #d63384;
 }
-
 
 /* ===========================
         Paragraph
 =========================== */
 
-.footer-box p{
+.footer-box p {
+  line-height: 1.9;
 
-    line-height:1.9;
+  font-size: 17px;
 
-    font-size:17px;
-
-    color:#684d63;
-
+  color: #684d63;
 }
 
+.subject {
+  margin-top: 18px;
 
-.subject{
-
-    margin-top:18px;
-
-    font-weight:bold;
-
+  font-weight: bold;
 }
-
 
 /* ===========================
          Menu
 =========================== */
 
-.footer-box ul{
+.footer-box ul {
+  list-style: none;
 
-    list-style:none;
-
-    padding:0;
-
+  padding: 0;
 }
 
-
-.footer-box li{
-
-    margin:16px 0;
-
+.footer-box li {
+  margin: 16px 0;
 }
 
+.footer-box a {
+  text-decoration: none;
 
-.footer-box a{
+  color: #6d5570;
 
-    text-decoration:none;
+  font-size: 17px;
 
-    color:#6d5570;
-
-    font-size:17px;
-
-    transition:.3s;
-
+  transition: 0.3s;
 }
 
+.footer-box a:hover {
+  color: #ff4fa0;
 
-.footer-box a:hover{
-
-    color:#ff4fa0;
-
-    padding-left:8px;
-
+  padding-left: 8px;
 }
-
 
 /* ===========================
       Bottom Footer
 =========================== */
 
-.footer-bottom{
+.footer-bottom {
+  margin-top: 50px;
 
-    margin-top:50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
 
-    border-top:1px solid rgba(255,255,255,.5);
+  text-align: center;
 
-    text-align:center;
+  padding: 22px;
 
-    padding:22px;
+  font-size: 16px;
 
-    font-size:16px;
-
-    color:#80536d;
-
+  color: #80536d;
 }
-
 
 /* ===========================
       Responsive
 =========================== */
 
-@media(max-width:992px){
-
-.footer-container{
-
-grid-template-columns:repeat(2,1fr);
-
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-}
+@media (max-width: 650px) {
+  .footer-container {
+    grid-template-columns: 1fr;
 
+    gap: 35px;
 
-@media(max-width:650px){
+    text-align: center;
+  }
 
-.footer-container{
-
-grid-template-columns:1fr;
-
-gap:35px;
-
-text-align:center;
-
-}
-
-.footer-box a:hover{
-
-padding-left:0;
-
-}
-
+  .footer-box a:hover {
+    padding-left: 0;
+  }
 }
