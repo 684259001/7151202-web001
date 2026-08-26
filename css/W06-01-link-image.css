@@ -232,7 +232,7 @@ body {
   padding: 0 20px;
 }
 .icon {
-  background-color: #ff9dce;
+  background-color: #fdc1dd;
   border-radius: 5px;
   text-decoration: none;
 }
@@ -281,13 +281,114 @@ body {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 /* ============== right-sidebar ============= */
+
+/* คอนเทนเนอร์หลักฝั่งขวา */
 .right-sidebar {
-  border: 1px solid #04f618;
-  border-radius: 15px;
-  padding: 20px;
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 340px;
+  margin-left: 24px;
+  box-sizing: border-box;
+  font-family: 'Prompt', 'Kanit', sans-serif;
 }
 
+/* สไตล์กล่องการ์ด (ปรับขอบสีชมพูอ่อนเหมือนฝั่งซ้าย) */
+.right-sidebar .card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  border: 2px solid #fbcfe8; /* ขอบชมพูพาสเทล */
+  box-shadow: 0 4px 12px rgba(251, 207, 232, 0.2);
+}
+
+.right-sidebar .card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+/* ข้อความหัวข้อสีน้ำตาลเข้มเหมือนฝั่งซ้าย */
+.right-sidebar .card-title h2 {
+  font-size: 1.05rem;
+  color: #2b1810; 
+  margin: 0;
+  font-weight: 700;
+}
+
+.right-sidebar .icon {
+  font-size: 1.1rem;
+}
+
+/* รายการจุดประสงค์ (Card 1) */
+.right-sidebar .learning-list {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  counter-reset: item;
+}
+
+.right-sidebar .learning-list li {
+  counter-increment: item;
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+  color: #57433c; /* ตัวหนังสือสีน้ำตาลอ่อน */
+  line-height: 1.45;
+}
+
+.right-sidebar .learning-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* วงกลมตัวเลขเปลี่ยนเป็นสีชมพูตามธีม */
+.right-sidebar .learning-list li::before {
+  content: counter(item);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  background-color: #f472b6; /* ชมพูสดใส */
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* แท็ก (Card 2) ปรับให้อยู่ในโทนพาสเทลหวานๆ */
+.right-sidebar .tag-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.right-sidebar .tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 4px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: monospace;
+  text-align: center;
+}
+
+/* ปรับสีปุ่มแท็กตามธีม */
+.right-sidebar .tag-blue   { background-color: #e0f2fe; color: #0284c7; }
+.right-sidebar .tag-cyan   { background-color: #cffafe; color: #0891b2; }
+.right-sidebar .tag-green  { background-color: #dcfce7; color: #15803d; }
+.right-sidebar .tag-orange { background-color: #fef3c7; color: #d97706; }
+.right-sidebar .tag-purple { background-color: #f3e8ff; color: #7e22ce; }
+.right-sidebar .tag-pink   { background-color: #fce7f3; color: #db2777; }
+.right-sidebar .tag-teal   { background-color: #ccfbf1; color: #0d9488; }
+.right-sidebar .tag-yellow { background-color: #fef9c3; color: #ca8a04; }
 /* =============== tip-box ==============*/
 .tip-box {
   border: 1px solid #5c5cc4;
