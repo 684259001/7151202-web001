@@ -290,7 +290,7 @@ body {
   width: 340px;
   margin-left: 24px;
   box-sizing: border-box;
-  font-family: 'Prompt', 'Kanit', sans-serif;
+  font-family: "Prompt", "Kanit", sans-serif;
 }
 
 /* สไตล์กล่องการ์ด (ปรับขอบสีชมพูอ่อนเหมือนฝั่งซ้าย) */
@@ -312,7 +312,7 @@ body {
 /* ข้อความหัวข้อสีน้ำตาลเข้มเหมือนฝั่งซ้าย */
 .right-sidebar .card-title h2 {
   font-size: 1.05rem;
-  color: #2b1810; 
+  color: #2b1810;
   margin: 0;
   font-weight: 700;
 }
@@ -345,17 +345,21 @@ body {
 
 /* วงกลมตัวเลขเปลี่ยนเป็นสีชมพูตามธีม */
 .right-sidebar .learning-list li::before {
+  /* จัดตัวเลขให้นับเเบบอัตโนมัติ */
   content: counter(item);
   position: absolute;
   left: 0;
   top: 0;
   width: 22px;
   height: 22px;
-  background-color: #f472b6; /* ชมพูสดใส */
+  background-color: #f472b6;
   color: #ffffff;
   border-radius: 50%;
+  /* ดึงเลขให้ลงมาด้านล่าง */
   display: flex;
+
   align-items: center;
+
   justify-content: center;
   font-size: 0.75rem;
   font-weight: bold;
@@ -364,7 +368,9 @@ body {
 /* แท็ก (Card 2) ปรับให้อยู่ในโทนพาสเทลหวานๆ */
 .right-sidebar .tag-grid {
   display: grid;
+  /* 4 คลอลัม */
   grid-template-columns: repeat(4, 1fr);
+  /* ระยะห่าง */
   gap: 8px;
 }
 
@@ -380,18 +386,176 @@ body {
   text-align: center;
 }
 
-/* ปรับสีปุ่มแท็กตามธีม */
-.right-sidebar .tag-blue   { background-color: #e0f2fe; color: #0284c7; }
-.right-sidebar .tag-cyan   { background-color: #cffafe; color: #0891b2; }
-.right-sidebar .tag-green  { background-color: #dcfce7; color: #15803d; }
-.right-sidebar .tag-orange { background-color: #fef3c7; color: #d97706; }
-.right-sidebar .tag-purple { background-color: #f3e8ff; color: #7e22ce; }
-.right-sidebar .tag-pink   { background-color: #fce7f3; color: #db2777; }
-.right-sidebar .tag-teal   { background-color: #ccfbf1; color: #0d9488; }
-.right-sidebar .tag-yellow { background-color: #fef9c3; color: #ca8a04; }
+/* .right-sidebar .tag-blue {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+.right-sidebar .tag-cyan {
+  background-color: #cffafe;
+  color: #0891b2;
+}
+.right-sidebar .tag-green {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+.right-sidebar .tag-orange {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+.right-sidebar .tag-purple {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}
+.right-sidebar .tag-pink {
+  background-color: #fce7f3;
+  color: #db2777;
+}
+.right-sidebar .tag-teal {
+  background-color: #ccfbf1;
+  color: #0d9488;
+}
+.right-sidebar .tag-yellow {
+  background-color: #fef9c3;
+  color: #ca8a04;
+} */
+/* ======================================== */
+/*nth = n บอกตำแหน่งที่ th คือบอกสำดับ */
+.tag-grid span:nth-child(1) {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+.tag-grid span:nth-child(2) {
+  background-color: #cffafe;
+  color: #0891b2;
+}
+.tag-grid span:nth-child(3) {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+.tag-grid span:nth-child(4) {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+.tag-grid span:nth-child(5) {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}
+.tag-grid span:nth-child(6) {
+  background-color: #fce7f3;
+  color: #db2777;
+}
+.tag-grid span:nth-child(7) {
+  background-color: #ccfbf1;
+  color: #0d9488;
+}
+.tag-grid span:nth-child(8) {
+  background-color: #fef9c3;
+  color: #ca8a04;
+}
+
+/* ================== กิจกรรมฝึกปฏิบัติ ==================== */
+.tag-activity li:nth-child(1) span {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+.tag-activity li:nth-child(2) span {
+  background-color: #cffafe;
+  color: #0891b2;
+}
+.tag-activity li:nth-child(3) span {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+.tag-activity li:nth-child(4) span {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+.tag-activity li:nth-child(5) span {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}
+.tag-activity li:nth-child(6) span {
+  background-color: #fce7f3;
+  color: #db2777;
+}
+
+.tag-activity {
+  padding: 15px;
+  margin: 0;
+  list-style: none;
+  /* counter-reset: item; */
+  /* align-items: center; */
+  /* gap: 15px; */
+}
+.submit-card {
+  background-color: #fff0f6; /* สีพื้นหลังชมพูอ่อน */
+  border: 1px solid #f472b6; /* สีขอบชมพูเข้ม */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(251, 207, 232, 0.2);
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.submit-icon {
+  font-size: 30px;
+  margin-left: 10px;
+}
+
 /* =============== tip-box ==============*/
 .tip-box {
-  border: 1px solid #5c5cc4;
   padding: 20px;
-  margin: 20px auto;
+  margin: 20px;
+
+  background-color: #fff0f6;
+  border-radius: 10px;
+  border: 1px solid #f472b6;
+  box-shadow: 0 4px 14px rgba(251, 207, 232, 0.2);
+
+  display: grid;
+  grid-template-columns: 90px 1fr 170px;
+  align-items: center;
+}
+.tip-icon {
+  font-size: 50px;
+  font-weight: bold;
+
+  margin-right: 10px;
+  color: #fff0f6;
+  background-color: #f472b6;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.tip-content h2 {
+  color: #57433c;
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.tip-content p {
+  font-size: 15px;
+  color: #1f2937;
+}
+
+.tip-content span {
+  color: #e11d48;
+  font-family: Consolas, monospace;
+  font-weight: bold;
+}
+.tip-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 45px;
+  text-align: center;
 }
