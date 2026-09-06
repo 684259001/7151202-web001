@@ -144,6 +144,31 @@
         .text-center {
             text-align: center;
         }
+        /* ปุ่ม Workshop */
+.workshop-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 5px 5px 0;
+
+    background-color: #f8b6d2;
+    color: #5a3a4a;
+
+    text-decoration: none;
+    border-radius: 12px;
+    border: 2px solid #f08bb5;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+/* ตอนเอาเมาส์ไปชี้ */
+.workshop-btn:hover {
+    background-color: #f08bb5;
+    color: white;
+    transform: translateY(-2px);
+}
+
     </style>
 </head>
 <body>
@@ -163,13 +188,15 @@
         <li><a href="#addingimages">Adding Images</a></li>
         <li><a href="#creatingtables">Creating Tables</a></li>
         <li><a href="#htmlforms">HTML Forms</a></li>
-        <li><a href="">Embedding Multimedia (Audio &amp; Video)</a></li>
+        <li><a href="#">Embedding Multimedia (Audio &amp; Video)</a></li>
         <li><a href="#semantichtml">Semantic HTML</a></li>
     </ul>
     <hr>
     
     <!-- Content Introduction-->
      <h2 id="introduction">Introduction to HTML</h2>
+     <br>
+     <a href="#"></a>
      <pre>- HTML stands for Hyper Text Markup Language
  - HTML is the standard markup language for creating Web pages
  - HTML describes the structure of a Web page
@@ -207,8 +234,8 @@ content of web pages
      <!-- Content heading-->
      <h2 id="heading">Heading</h2>
      <br>
-     <a href="web001-01-heading.html">Workshop 1</a>
-     <a href="web001-02-heading.html">| Workshop 2</a>
+     <a href="web001-01-heading.html" class="workshop-btn">Workshop 1</a>
+     <a href="web001-02-heading.html" class="workshop-btn">Workshop 2</a>
      <p>Workshop<br>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags...</p>
      <pre>- &lt;h1&gt;: Heading 1 
    - &lt;h2&gt;: Heading 2 
@@ -217,6 +244,7 @@ content of web pages
    - &lt;h5&gt;: Heading 5 
    - &lt;h6&gt;: Heading 6 </pre>
      <a href="#top">Back to top</a>
+     <br>
      
 
      <!-- Content paragraph-->
@@ -224,12 +252,14 @@ content of web pages
      <p>Workshop<br>HTML paragraphs are defined with the &lt;p&gt; tag... </p>
      <pre>- &lt;p&gt;: Paragraph </pre>
      <a href="#top">Back to top</a>
+     <br>
 
      <!-- Content text formatting-->
      <h2 id="textfor">Text Formatting</h2>
      <br>
-     <a href="formatting.html">Work Shop</a>
      <p>Workshop<br>HTML provides various elements to format text... </p>
+     <a href="formatting.html" class="workshop-btn">Workshop 1</a>
+<a href="W04-01-formatting.html" class="workshop-btn">Workshop 2</a>
      <pre> - &lt;h1&gt; to &lt;h6&gt;: Headings 
     - &lt;p&gt;: Paragraph 
     - &lt;pre&gt;: Preformatted text 
@@ -252,10 +282,12 @@ content of web pages
     - &lt;q&gt;: Inline quotation 
     - &lt;code&gt;: Code snippet </pre>
      <a href="#top">Back to top</a>
+        <br>
 
      <!-- Content creating links-->
      <h2 id="creatinglinks">Creating Links</h2>
      <p>Workshop<br>HTML links are defined with the &lt;a&gt; tag... </p>
+     <a href="W06-01-link-image.html" class="workshop-btn">Workshop</a>
      <pre>- &lt;a href="url" target=""&gt;Link text&lt;/a&gt; 
         - The href attribute specifies the URL of the page the link goes to 
         - The target attribute specifies where to open the linked document 
@@ -276,6 +308,7 @@ content of web pages
             - Use the download attribute to create a download link 
             - Example: &lt;a href="file.txt" download&gt;Download Text File&lt;/a&gt;</pre>
      <a href="#top">Back to top</a>
+     <br>
 
      <!-- Content Lists Ordered and Unorded-->
      <h2 id="listsordered">Lists (Ordered and Unordered)</h2>
@@ -321,10 +354,12 @@ content of web pages
             - Example: &lt;ol style="list-style-type: upper-roman;"&gt; 
             - Example: &lt;ol style="list-style-type: lower-roman;"&gt;</pre>
      <a href="#top">Back to top</a>
+     <br>
 
      <!-- Content Adding Images-->
      <h2 id="addingimages">Adding Images</h2>
      <p>Workshop<br>HTML images are defined with the &lt;img&gt; tag...</p>
+     <a href="W06-01-link-image.html" class="workshop-btn">Workshop</a>
      <pre> - &lt;img src="url" alt="description"&gt; 
         - The src attribute specifies the URL of the image 
         - The alt attribute provides a description of the image 
@@ -367,6 +402,7 @@ content of web pages
                     object-fit: cover; 
                 }</pre>
      <a href="#top">Back to top</a>
+     <br>
 
      <!-- Content Creating Tables-->
      <h2 id="creatingtables">Creating Tables</h2>
@@ -377,6 +413,7 @@ HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;
         - &lt;th&gt;: Table header 
         - &lt;td&gt;: Table data/cell </pre>
      <a href="#top">Back to top</a>
+     <br>
 
      <!-- Content HTML Forms -->
      <h2 id="htmlforms">HTML Forms</h2>
@@ -429,6 +466,7 @@ HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;
            - การส่งข้อมูลไปยังเซิร์ฟเวอร์ 
            - การใช้ JavaScript (เช่น onsubmit)</pre>
      <a href="#top">Back to top</a>
+     <br>
 
      <!-- Content Semantic HTML-->
      <h2 id="semantichtml">Semantic HTML</h2>
@@ -441,6 +479,7 @@ HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;
         - &lt;aside&gt;: Defines content aside from the page content 
         - &lt;footer&gt;: Defines a footer for a document or section </pre>
      <a href="#top">Back to top</a>
+     <br>
 
      <hr>
     <a href="https://www.w3schools.com/html/default.asp">learn more about HTML </a>
