@@ -162,7 +162,7 @@ body {
   /* object-fit: fill; ส่วนไอนี่ รูปพอดีกรอบแต่เเม่มยืดจนรูปเบี้ยว*/
 
   /* ========= ส่วนไอนี่ รูปพอดีกรอบเเต่รูปไม่เบี้ยว ========== */
-  opject-fit: cover;
+  object-fit: cover;
 
   border-radius: 25px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -273,7 +273,7 @@ body {
 }
 .pic3p {
   opacity: 0.9;
-  opject-fit: cover;
+  object-fit: cover;
 
   border: 1.5px solid #ff9dce;
 
@@ -454,39 +454,103 @@ body {
 }
 
 /* ================== กิจกรรมฝึกปฏิบัติ ==================== */
-.tag-activity li:nth-child(1) span {
-  background-color: #e0f2fe;
-  color: #0284c7;
-}
-.tag-activity li:nth-child(2) span {
-  background-color: #cffafe;
-  color: #0891b2;
-}
-.tag-activity li:nth-child(3) span {
-  background-color: #dcfce7;
-  color: #15803d;
-}
-.tag-activity li:nth-child(4) span {
-  background-color: #fef3c7;
-  color: #d97706;
-}
-.tag-activity li:nth-child(5) span {
-  background-color: #f3e8ff;
-  color: #7e22ce;
-}
-.tag-activity li:nth-child(6) span {
-  background-color: #fce7f3;
-  color: #db2777;
+
+/* รายการกิจกรรม */
+.tag-activity {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0 0;
 }
 
-.tag-activity {
-  padding: 15px;
-  margin: 0;
-  list-style: none;
-  /* counter-reset: item; */
-  /* align-items: center; */
-  /* gap: 15px; */
+/* แต่ละข้อ */
+.tag-activity li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  margin-bottom: 14px;
+  line-height: 1.5;
 }
+
+/* เลขข้อ 1, 2, 3, 4, 5, 6 */
+.tag-activity li > span {
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: #f9a8d4;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  border: 2px solid #f472b6;
+  box-shadow: 0 3px 8px rgba(244, 114, 182, 0.20);
+}
+
+/* ข้อความของแต่ละกิจกรรม */
+.tag-activity li p {
+  flex: 1;
+  margin: 3px 0 0 0;
+
+  color: #57433c;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* สีเลขแต่ละข้อ ให้เข้ากับโทนพาสเทล */
+.tag-activity li:nth-child(1) > span {
+  background-color: #bae6fd;
+  color: #0369a1;
+  border-color: #7dd3fc;
+}
+
+.tag-activity li:nth-child(2) > span {
+  background-color: #a5f3fc;
+  color: #0e7490;
+  border-color: #67e8f9;
+}
+
+.tag-activity li:nth-child(3) > span {
+  background-color: #bbf7d0;
+  color: #15803d;
+  border-color: #86efac;
+}
+
+.tag-activity li:nth-child(4) > span {
+  background-color: #fde68a;
+  color: #b45309;
+  border-color: #fcd34d;
+}
+
+.tag-activity li:nth-child(5) > span {
+  background-color: #e9d5ff;
+  color: #7e22ce;
+  border-color: #d8b4fe;
+}
+
+.tag-activity li:nth-child(6) > span {
+  background-color: #fbcfe8;
+  color: #be185d;
+  border-color: #f9a8d4;
+}
+
+/* เอาระยะห่างของข้อสุดท้ายออก */
+.tag-activity li:last-child {
+  margin-bottom: 0;
+}
+
+/* เอฟเฟกต์ตอนเอาเมาส์ไปชี้ */
+.tag-activity li:hover > span {
+  transform: scale(1.08);
+  transition: 0.2s ease;
+}
+
 .submit-card {
   background-color: #fff0f6; /* สีพื้นหลังชมพูอ่อน */
   border: 1px solid #f472b6; /* สีขอบชมพูเข้ม */
@@ -559,6 +623,8 @@ body {
   font-size: 45px;
   text-align: center;
 }
+
+
 /* ============================== 
               Responsive
 ==================================*/
@@ -635,4 +701,51 @@ body {
     grid-template-columns: 90px 1fr;
     align-items: center;
   }
+}
+
+/* ===== FINAL FIX: กิจกรรมฝึกปฏิบัติ ===== */
+.right-sidebar .card .card-title {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 8px !important;
+  width: 100% !important;
+  margin-bottom: 16px !important;
+}
+
+.right-sidebar .card .card-title h2 {
+  margin: 0 !important;
+}
+
+.right-sidebar .card > .tag-activity {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.right-sidebar .card > .tag-activity li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  width: 100% !important;
+  margin: 0 0 14px 0 !important;
+  padding: 0 !important;
+}
+
+.right-sidebar .card > .tag-activity li > span {
+  flex: 0 0 30px !important;
+  width: 30px !important;
+  height: 30px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+}
+
+.right-sidebar .card > .tag-activity li > p {
+  flex: 1 1 auto !important;
+  margin: 3px 0 0 0 !important;
+  padding: 0 !important;
 }
