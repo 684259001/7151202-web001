@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* 1rem = 16px */
+    /* font-size: 16px; */
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    line-height: 1.6;
+    /* จะใช้ varเราต้องมี-- มันคือชื่อของตัวแปรที่เราตั้งไว้ใน :root */
+    color: var(--text-color);
+
+    background: linear-gradient(135deg, #ffffff 0%,#ffffff 50%,#e8a5fb 100%);
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* root เอาไว้เก็บตัวแปลพวกสี */
+:root {
+    /* สีหลักของเว็บ */
+    --primary-color: rgb(222, 123, 233);
+    --primary-color-hover: #88039c;
+    --secondary-color: rgb(131, 1, 105);
+    --footer-color: rgb(0, 0, 0);
+
+    /* สีข้อความ */
+    --text-color: black;
+    --muted-text-color: #666666;
+    --nav-text-color: #2d2c2c;
+    --light-text-color: #f5f5f5;
+    --soft-text-color: rgb(69, 44, 33);
+
+    /* สีพื้น */
+    --background-color: #ffffff;
+    --btn-bg-color: rgb(88, 2, 88);
+
+    /* สีเงา */
+    --header-shadow: 0 4px 8px rgba(81, 1, 139, 0.1);
+    --card-shadow: 0 4px 8px rgba(81, 1, 139, 0.1);
+
+    /* สีขอบ */
+    --border-color: #f6e1f9;
+
+    /* สีการ์ด */
+    --card-bg-color: rgb(250, 182, 193);
+}
+
+/* ============================ Header ============================= */
+.header {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: var(--header-shadow);
+
+    display: flex;
+    /* สำหรับจัดพื้นที่ให้สมดุลขึ้น */
+    justify-content: center;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background-color: var(--background-color);
+    backdrop-filter: blur(10px);
+}
+
+.header-content {
+    text-align: center;
+    padding-block: 1.5rem;
+
+}
+
+.header-title {
+color: var(--primary-color);
+font-size: clamp(2rem, 5vw, 3rem);
+line-height: 1.2;
+margin-bottom: 0.25rem;
+}
+
+.header-subtitle {
+    color: var(--muted-text-color);
+}
+
+/* ============================ Nav ============================= */
+nav {
+    padding-block: 2rem;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--nav-text-color);
+
+    padding: 0.65rem 1.2rem;
+    box-shadow: var(--card-shadow);
+    border-radius: 999px;
+    margin-right: 0.5rem;
+
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+
+    transform: translateY(-5px);
+}
+nav a.active {
+    background-color: var(--btn-bg-color);
+    color: var(--light-text-color);
+}
+/* ============================ Main ============================= */
+.page-title {
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-block: 2rem;
+}
+.pet-grid {
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+.pet-card {
+    border: 1px solid var(--border-color);
+
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.pet-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--header-shadow);
+}
+.pet-card img{
+    height: 16.25rem;
+    width: 100%;
+    object-fit: cover;
+}
+.pet-content {
+    padding: 1.25rem;
+    box-shadow: var(--card-shadow);
+    border-radius: 20px;
+    background-color: var(--background-color);
+}
+.pet-content h2 {
+    color: var(--text-color);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    margin-bottom: 0.5rem;
+}
+/* ============================ Info Section ============================= */
+
+.info-section {
+    background-color: var(--background-color);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+
+    padding: 30px;
+    margin: 30px auto;
+
+    box-shadow: var(--card-shadow);
+}
+
+
+/* หัวข้อ */
+.info-title {
+    text-align: center;
+    color: var(--soft-text-color);
+
+    margin-bottom: 25px;
+}
+
+
+/* ============================ Info Grid ============================= */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+/* ============================ Info Card ============================= */
+.info-card {
+    background-color: var(--card-bg-color);
+    color: var(--soft-text-color);
+
+    padding: 20px;
+    border-radius: 15px;
+
+    box-shadow: var(--card-shadow);
+}
+/* หัวข้อในการ์ด */
+.info-card h3 {
+    color: var(--soft-text-color);
+    margin-bottom: 10px;
+}
+/* ข้อความในการ์ด */
+.info-card p {
+    color: var(--soft-text-color);
+    line-height: 1.6;
+}
+/* ============================ Footer ============================= */
+footer {
+    background-color: var(--footer-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding-block: 2rem;
+    margin-top: 2rem;
+}
+/* ============================ Responsive ============================= */
