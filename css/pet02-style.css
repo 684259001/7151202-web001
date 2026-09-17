@@ -1,0 +1,347 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* 1rem = 16px */
+    /* font-size: 16px; */
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    line-height: 1.6;
+    /* จะใช้ varเราต้องมี-- มันคือชื่อของตัวแปรที่เราตั้งไว้ใน :root */
+    color: var(--text-color);
+
+    background: linear-gradient(135deg, #ffffff 0%,#ffffff 50%,#e8a5fb 100%);
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* root เอาไว้เก็บตัวแปลพวกสี */
+:root {
+    /* สีหลักของเว็บ */
+    --primary-soft-color: rgb(222, 123, 233);
+    --primary-color-hover: #88039c;
+    --primary-dark-color: #b603d1;
+    --secondary-color: rgb(131, 1, 105);
+    --footer-color: rgb(0, 0, 0);
+    --check-color: rgb(254, 166, 181);
+
+    /* สีข้อความ */
+    --text-color: black;
+    --muted-text-color: #666666;
+    --nav-text-color: #2d2c2c;
+    --light-text-color: #f5f5f5;
+    --soft-text-color: rgb(69, 44, 33);
+
+    /* สีพื้น */
+    --background-color: #ffffff;
+    --btn-bg-color: rgb(88, 2, 88);
+    --muted-bg-color: #e2e1e1;
+
+    /* สีเงา */
+    --header-shadow: 0 4px 8px rgba(81, 1, 139, 0.1);
+    --card-shadow: 0 4px 8px rgba(81, 1, 139, 0.1);
+
+    /* สีขอบ */
+    --border-color: #f6e1f9;
+
+    /* สีการ์ด */
+    --card-bg-color: rgb(250, 182, 193);
+}
+
+/* ============================ Header ============================= */
+.header {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: var(--header-shadow);
+
+    display: flex;
+    /* สำหรับจัดพื้นที่ให้สมดุลขึ้น */
+    justify-content: center;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background-color: var(--background-color);
+    backdrop-filter: blur(10px);
+}
+
+.header-content {
+    text-align: center;
+    padding-block: 1.5rem;
+
+}
+
+.header-title {
+color: var(--primary-soft-color);
+font-size: clamp(2rem, 5vw, 3rem);
+line-height: 1.2;
+margin-bottom: 0.25rem;
+}
+
+.header-subtitle {
+    color: var(--muted-text-color);
+}
+
+/* ============================ Nav ============================= */
+.filter-radio{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+/* คำสั่งซ่อน radio button */
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+/* เลือกสีให้กับ label ของ radio button */
+#filter-all:checked ~ .category-nav label[for="filter-all"] ,
+#filter-dog:checked ~ .category-nav label[for="filter-dog"] ,
+#filter-cat:checked ~ .category-nav label[for="filter-cat"] ,
+#filter-bird:checked ~ .category-nav label[for="filter-bird"] ,
+#filter-fish:checked ~ .category-nav label[for="filter-fish"] ,
+#filter-small-pet:checked ~ .category-nav label[for="filter-small-pet"] 
+{
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+}
+
+nav {
+    padding-block: 2rem;
+    text-align: center;
+}
+
+.category-nav label {
+    color: var(--nav-text-color);
+
+    padding: 0.65rem 1.2rem;
+    box-shadow: var(--card-shadow);
+    border-radius: 999px;
+    margin-right: 0.5rem;
+
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.category-nav label:hover {
+    background-color: var(--primary-soft-color);
+    color: var(--light-text-color);
+
+    transform: translateY(-5px);
+}
+
+.category-nav label.active {
+    background-color: var(--btn-bg-color);
+    color: var(--light-text-color);
+}
+/* ============================ Main ============================= */
+.page-title {
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-block: 2rem;
+}
+.pet-grid {
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+.pet-card {
+    border: 1px solid var(--border-color);
+
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.pet-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--header-shadow);
+}
+.pet-card img{
+    height: 16.25rem;
+    width: 100%;
+    object-fit: cover;
+}
+.pet-content {
+    padding: 1.25rem;
+    box-shadow: var(--card-shadow);
+    border-radius: 20px;
+    background-color: var(--background-color);
+}
+.pet-content h2 {
+    color: var(--text-color);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    margin-bottom: 0.5rem;
+}
+.category-hide {
+    display: none;
+}
+
+/* ซ่อนหัวข้อหมวดหมู่ */
+#filter-all:checked ~ main .show-all,
+#filter-dog:checked ~ main .show-dog,
+#filter-cat:checked ~ main .show-cat,
+#filter-bird:checked ~ main .show-bird,
+#filter-fish:checked ~ main .show-fish,
+#filter-small-pet:checked ~ main .show-small-pet
+{
+    display: inline;
+}
+/* ซ่อนการ์ดสัตว์ */
+#filter-dog:checked ~ main .pet-card,
+#filter-cat:checked ~ main .pet-card,
+#filter-bird:checked ~ main .pet-card,
+#filter-fish:checked ~ main .pet-card,
+#filter-small-pet:checked ~ main .pet-card
+{
+    display: none;
+}
+
+/* โชว์สัตว์ */
+#filter-dog:checked ~ main .show-dog,
+#filter-cat:checked ~ main .show-cat,
+#filter-bird:checked ~ main .show-bird,
+#filter-fish:checked ~ main .show-fish,
+#filter-small-pet:checked ~ main .show-small-pet
+{
+    display: block;
+}
+/* ============================ Info Section ============================= */
+
+.info-section {
+    background-color: var(--background-color);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+
+    padding: 30px;
+    margin: 30px auto;
+
+    box-shadow: var(--card-shadow);
+}
+
+
+/* หัวข้อ */
+.info-title {
+    text-align: center;
+    color: var(--soft-text-color);
+
+    margin-bottom: 25px;
+}
+
+
+/* ============================ Info Grid ============================= */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+/* ============================ Info Card ============================= */
+.info-card {
+    background-color: var(--card-bg-color);
+    color: var(--soft-text-color);
+
+    padding: 20px;
+    border-radius: 15px;
+
+    box-shadow: var(--card-shadow);
+}
+/* หัวข้อในการ์ด */
+.info-card h3 {
+    color: var(--soft-text-color);
+    margin-bottom: 10px;
+}
+/* ข้อความในการ์ด */
+.info-card p {
+    color: var(--soft-text-color);
+    line-height: 1.6;
+}
+
+/*============================= form-radio ==========================*/
+.form-radio {
+    background-color: var(--background-color);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+
+    padding: 30px;
+    margin: 30px auto;
+
+    box-shadow: var(--card-shadow);
+}
+.form-radio h2 {
+    text-align: center;
+    color: var(--primary-dark-color);
+}
+.form-radio p {
+    text-align: center;
+    color: var(--primary-soft-color);
+
+    margin-bottom: 0.9rem;
+}
+.form-radio fieldset {
+    padding: 1.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.7rem;
+}
+.form-radio legend {
+    padding: 0 0.5rem;
+    color: var(--primary-soft-color);
+    font-weight: bold;
+}
+.redio-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 0.75rem;
+
+    margin-bottom: 1rem;
+}
+.redio-option label {
+    background-color: var(--muted-bg-color);
+    color: var(--soft-text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    text-color: var(--soft-text-color);
+    cursor: pointer;
+}
+.redio-option input {
+    accent-color: var(--primary-soft-color);
+}
+.redio-option input:checked + label {
+    background-color: var(--check-color);
+    color: var(--soft-text-color);
+}
+.reset-btn {
+    background-color: var(--primary-soft-color);
+    color: var(--light-text-color);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    
+    display: block;
+    margin: 0 auto;
+
+    border: none;
+    border-radius: 0.5rem;
+}
+/* ============================ Footer ============================= */
+footer {
+    background-color: var(--footer-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding-block: 2rem;
+    margin-top: 2rem;
+}
+/* ============================ Responsive ============================= */
